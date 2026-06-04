@@ -17,15 +17,33 @@ const Index = () => {
       <Preloader />
       <Navbar />
       <main>
-        <HeroSection />
-        <FeaturedProjects />
-        <AboutSection />
-        <PropertyListings />
-        <AmenitiesSection />
-        <GallerySection />
-        <TestimonialsSection />
-        <CTASection />
-        <ContactSection />
+        <div className="section-black">
+          <HeroSection />
+        </div>
+        <div className="section-black">
+          <FeaturedProjects />
+        </div>
+        <div className="section-white">
+          <AboutSection />
+        </div>
+        <div className="section-black">
+          <PropertyListings />
+        </div>
+        <div className="section-white">
+          <AmenitiesSection />
+        </div>
+        <div className="section-black">
+          <GallerySection />
+        </div>
+        <div className="section-white">
+          <TestimonialsSection />
+        </div>
+        <div className="section-black">
+          <CTASection />
+        </div>
+        <div className="section-white">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </>

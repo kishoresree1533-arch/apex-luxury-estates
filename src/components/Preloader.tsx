@@ -20,10 +20,10 @@ export default function Preloader() {
     >
       <div className="text-center">
         <div className="font-heading text-4xl font-bold tracking-wider mb-2 animate-fade-up">
-          <span className="text-gradient-gold">ÉLITE</span>
+          <span className="text-gradient-gold">Porko</span>
         </div>
         <p className="text-xs font-body tracking-[0.4em] uppercase text-muted-foreground animate-fade-up delay-200">
-          Estates
+          construction & Estate
         </p>
         <div className="mt-6 w-32 h-0.5 bg-secondary rounded-full overflow-hidden mx-auto">
           <div className="h-full bg-primary rounded-full" style={{ animation: 'loadBar 1.5s ease-in-out forwards' }} />

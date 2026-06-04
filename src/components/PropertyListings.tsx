@@ -5,19 +5,25 @@ import property1 from '@/assets/property-1.jpg';
 import property2 from '@/assets/property-2.jpg';
 import property3 from '@/assets/property-3.jpg';
 import gallery1 from '@/assets/gallery-1.jpg';
+import gallery2 from '@/assets/gallery-2.jpg';
 import gallery3 from '@/assets/gallery-3.jpg';
+import gallery4 from '@/assets/gallery-4.jpg';
 import ctaBg from '@/assets/cta-bg.jpg';
+import aboutImage from '@/assets/about-image.jpg';
 
 const allProperties = [
-  { id: 1, image: property1, title: 'Sky Penthouse', location: 'New York', price: '$12,500,000', type: 'Penthouse', beds: 4, baths: 5, sqft: '6,200' },
-  { id: 2, image: property2, title: 'Ocean Pearl Villa', location: 'Maldives', price: '$8,900,000', type: 'Villa', beds: 6, baths: 7, sqft: '9,500' },
-  { id: 3, image: property3, title: 'Solaris Residence', location: 'Dubai', price: '$15,000,000', type: 'Penthouse', beds: 5, baths: 6, sqft: '8,100' },
-  { id: 4, image: gallery1, title: 'Tropical Haven', location: 'Bali', price: '$4,200,000', type: 'Villa', beds: 3, baths: 4, sqft: '5,000' },
-  { id: 5, image: gallery3, title: 'Sunset Retreat', location: 'Santorini', price: '$6,800,000', type: 'Villa', beds: 4, baths: 4, sqft: '4,800' },
-  { id: 6, image: ctaBg, title: 'Royal Estate', location: 'London', price: '$22,000,000', type: 'Mansion', beds: 8, baths: 10, sqft: '15,000' },
+  { id: 1, image: property1, title: 'Salem Heights Penthouse', location: 'Hasthampatti, Salem', price: '₹2.5 Crore', type: 'Penthouse', beds: 4, baths: 4, sqft: '4,200' },
+  { id: 2, image: property2, title: 'Palm Grove Villa', location: 'Saravanampatti, Coimbatore', price: '₹1.8 Crore', type: 'Villa', beds: 4, baths: 5, sqft: '3,500' },
+  { id: 3, image: property3, title: 'Marina Vista Apartment', location: 'Adyar, Chennai', price: '₹3.2 Crore', type: 'Premium Apartment', beds: 3, baths: 3, sqft: '2,800' },
+  { id: 4, image: gallery1, title: 'Orchard Retreat', location: 'Yercaud, Salem', price: '₹1.5 Crore', type: 'Villa', beds: 3, baths: 3, sqft: '2,500' },
+  { id: 5, image: gallery3, title: 'Coimbatore Heritage Bungalow', location: 'RS Puram, Coimbatore', price: '₹4.5 Crore', type: 'Villa', beds: 5, baths: 5, sqft: '5,000' },
+  { id: 6, image: ctaBg, title: 'The Royal Residency', location: 'Nungambakkam, Chennai', price: '₹12.0 Crore', type: 'Mansion', beds: 6, baths: 8, sqft: '8,500' },
+  { id: 7, image: gallery2, title: 'Emerald Hill Estates', location: 'Steel Plant Road, Salem', price: '₹85 Lakhs', type: '3BHK', beds: 3, baths: 3, sqft: '1,800' },
+  { id: 8, image: gallery4, title: 'Modern Zen Apartment', location: 'Peelamedu, Coimbatore', price: '₹1.2 Crore', type: 'Premium Apartment', beds: 2, baths: 2, sqft: '1,500' },
+  { id: 9, image: aboutImage, title: 'Coastal Breeze Villa', location: 'ECR, Chennai', price: '₹7.5 Crore', type: 'Villa', beds: 4, baths: 4, sqft: '4,000' },
 ];
 
-const types = ['All', 'Villa', 'Penthouse', 'Mansion'];
+const types = ['All', 'Villa', '3BHK', 'Mansion', 'Premium Apartment', 'Penthouse'];
 
 export default function PropertyListings() {
   const [activeType, setActiveType] = useState('All');
@@ -39,7 +45,7 @@ export default function PropertyListings() {
             <button
               key={type}
               onClick={() => setActiveType(type)}
-              className={`px-6 py-2.5 text-xs font-body tracking-[0.15em] uppercase rounded transition-all duration-300 ${
+              className={`px-6 py-2.5 text-xs font-body tracking-[0.15em] uppercase rounded-full transition-all duration-300 ${
                 activeType === type
                   ? 'btn-luxury'
                   : 'glass text-muted-foreground hover:text-foreground'

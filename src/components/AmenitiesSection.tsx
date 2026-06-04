@@ -16,7 +16,7 @@ export default function AmenitiesSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding">
       <div ref={ref} className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-3">Lifestyle</p>

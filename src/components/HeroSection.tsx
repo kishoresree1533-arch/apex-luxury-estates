@@ -1,67 +1,66 @@
-import { Search, ArrowRight } from 'lucide-react';
-import heroImage from '@/assets/hero-villa.jpg';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+import heroImage from '@/assets/construction-hero.png';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5 bg-black">
+      {/* Background with advanced gradient and cinematic zoom */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxury modern villa with infinity pool at twilight"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
+          alt="Premium architectural estate by Apex"
+          className="w-full h-full object-cover transition-transform [transition-duration:3s] scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+        {/* Consistent overlay without bottom merging */}
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <p className="animate-fade-up text-primary font-body text-sm tracking-[0.4em] uppercase mb-6">
-          Redefining Luxury Real Estate
-        </p>
-        <h1 className="animate-fade-up delay-100 font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
-          Discover Luxury
-          <br />
-          <span className="text-gradient-gold">Living</span>
-        </h1>
-        <p className="animate-fade-up delay-200 font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-          Experience the pinnacle of architectural excellence and timeless elegance.
-          Your dream home awaits in the world's most prestigious locations.
-        </p>
-        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <a href="#projects" className="btn-luxury rounded-sm flex items-center justify-center gap-2">
-            Explore Projects <ArrowRight size={16} />
-          </a>
-          <a href="#contact" className="btn-outline-luxury rounded-sm flex items-center justify-center gap-2">
-            Contact Us
-          </a>
-        </div>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between pointer-events-none pt-32 pb-12 md:pt-40 md:pb-20">
+        
+        <div className="md:w-3/5 text-left pointer-events-auto">
+          <div className="animate-fade-in mb-6">
+            <span className="text-primary font-body text-sm tracking-[0.5em] uppercase font-bold border-l-2 border-primary pl-4">
+              Apex Elite Portfolio
+            </span>
+          </div>
 
-        <div className="animate-fade-up delay-400 glass rounded-lg p-3 max-w-3xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-3">
-            <input
-              type="text"
-              placeholder="Search by location, project, or type..."
-              className="flex-1 bg-secondary/50 border-0 rounded px-5 py-3 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-            />
-            <select className="bg-secondary/50 rounded px-4 py-3 text-sm font-body text-muted-foreground focus:outline-none">
-              <option>All Types</option>
-              <option>Villa</option>
-              <option>Penthouse</option>
-              <option>Mansion</option>
-            </select>
-            <button className="btn-luxury rounded flex items-center justify-center gap-2 px-6">
-              <Search size={16} /> Search
-            </button>
+          <h1 className="animate-fade-up delay-100 font-heading text-6xl md:text-8xl font-bold leading-[1.1] mb-8 text-white drop-shadow-2xl">
+            Where <span className="text-gradient-gold italic">Construction</span>
+            <br />
+            Meets <span className="text-white opacity-90 underline underline-offset-[12px] decoration-primary/30">Estate</span>
+          </h1>
+          
+          <p className="animate-fade-up delay-200 font-body text-lg md:text-xl text-white/70 max-w-xl mb-10 font-light leading-relaxed">
+            Crafting architectural masterpieces and managing the world's most 
+            exclusive estates. Experience the synergy of fine engineering and 
+            luxury sales.
+          </p>
+
+          <div className="animate-fade-up delay-300 flex flex-wrap gap-6 items-center">
+            <a href="#projects" className="bg-primary text-navy font-bold text-xs tracking-[0.2em] uppercase rounded-full px-10 py-5 hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(234,179,8,0.3)]">
+               Explore Collections
+            </a>
+            <a href="/estate" className="text-white hover:text-primary transition-all text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2 group">
+              View Estate Listings <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+            </a>
           </div>
         </div>
+
+        {/* Floating Architectural Badge (Construction & Estate reference) */}
+        <div className="hidden lg:flex flex-col items-center gap-4 animate-fade-in delay-500 opacity-60">
+           <div className="w-[1px] h-32 bg-gradient-to-b from-transparent to-primary" />
+           <div className="rotate-90 origin-center translate-y-12 whitespace-nowrap">
+             <span className="text-[10px] tracking-[0.6em] uppercase text-primary font-bold">Engineering Excellence • 2026</span>
+           </div>
+        </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-primary/50 flex justify-center pt-2">
-          <div className="w-1 h-3 bg-primary rounded-full" />
-        </div>
+      {/* Modern Scrolling Indicator - Tightened bottom position */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span className="text-[8px] tracking-[0.5em] uppercase text-white/40 font-bold">Scroll to discover</span>
+        <div className="w-px h-12 bg-gradient-to-b from-primary via-primary/30 to-transparent animate-pulse" />
       </div>
     </section>
   );
 }
+

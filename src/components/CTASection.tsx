@@ -20,7 +20,7 @@ export default function CTASection() {
           <p className="text-muted-foreground font-body font-light text-lg mb-10 max-w-xl mx-auto">
             Let our expert team guide you to the extraordinary residence you deserve.
           </p>
-          <a href="#contact" className="btn-luxury rounded-sm inline-flex items-center gap-2 text-sm">
+          <a href="#contact" className="btn-luxury rounded-full inline-flex items-center gap-2 text-sm">
             Schedule a Consultation <ArrowRight size={16} />
           </a>
         </div>

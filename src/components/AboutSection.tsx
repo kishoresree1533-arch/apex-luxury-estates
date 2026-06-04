@@ -5,15 +5,15 @@ import aboutImage from '@/assets/about-image.jpg';
 const stats = [
   { icon: Award, value: '25+', label: 'Years Experience' },
   { icon: Users, value: '3,000+', label: 'Happy Clients' },
-  { icon: Globe, value: '40+', label: 'Global Locations' },
-  { icon: TrendingUp, value: '$12B+', label: 'Property Value' },
+  { icon: Globe, value: '15+', label: 'Regional Offices' },
+  { icon: TrendingUp, value: '₹50B+', label: 'Property Value' },
 ];
 
 export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
+    <section id="about" className="section-padding">
       <div ref={ref} className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className={isVisible ? 'animate-slide-left' : 'opacity-0'}>
@@ -39,8 +39,8 @@ export default function AboutSection() {
               Crafting Legacies in <span className="text-gradient-gold">Luxury</span>
             </h2>
             <p className="text-muted-foreground font-body font-light leading-relaxed mb-6">
-              For over two decades, Élite Estates has been the trusted name in ultra-luxury real estate.
-              We curate the world's most extraordinary properties, connecting discerning individuals
+              For over two decades, Apex Luxury Estates has been the trusted name in ultra-luxury real estate in Tamil Nadu.
+              We curate the region's most extraordinary properties, connecting discerning individuals
               with residences that transcend the ordinary.
             </p>
             <p className="text-muted-foreground font-body font-light leading-relaxed mb-10">

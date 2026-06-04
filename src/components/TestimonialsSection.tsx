@@ -4,21 +4,21 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const testimonials = [
   {
-    name: 'Alexander Chen',
-    role: 'CEO, Meridian Capital',
-    text: 'Élite Estates delivered an extraordinary experience. From the first consultation to the keys in hand, every detail was handled with impeccable precision. Our penthouse in Manhattan exceeded every expectation.',
+    name: 'Rajesh Kumar',
+    role: 'CEO, Southern Textile Corp',
+    text: 'Apex Luxury Estates delivered an extraordinary experience. From the first consultation to the keys in hand, every detail was handled with impeccable precision. Our villa in Coimbatore exceeded every expectation.',
     rating: 5,
   },
   {
-    name: 'Isabella Rosetti',
-    role: 'Fashion Designer',
-    text: 'The level of personalized service is unmatched. They understood our vision for a Mediterranean villa perfectly and found us a property that feels like it was built just for us.',
+    name: 'Meera Krishnan',
+    role: 'Architectural Consultant',
+    text: 'The level of personalized service is unmatched. They understood our vision for a modern Salem home perfectly and found us a property that feels like it was built just for us.',
     rating: 5,
   },
   {
-    name: 'James Wellington III',
-    role: 'Private Investor',
-    text: 'Having worked with numerous luxury brokerages worldwide, Élite Estates stands apart. Their market insight, discretion, and dedication to client satisfaction are truly world-class.',
+    name: 'Senthil Nathan',
+    role: 'Tech Entrepreneur',
+    text: 'Having worked with numerous real estate firms in Chennai, Apex stands apart. Their market insight, discretion, and dedication to client satisfaction are truly world-class.',
     rating: 5,
   },
 ];
@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding">
       <div ref={ref} className="max-w-4xl mx-auto">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-3">Testimonials</p>

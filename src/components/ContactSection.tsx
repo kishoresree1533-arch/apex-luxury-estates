@@ -50,7 +50,7 @@ export default function ContactSection() {
                 rows={4}
                 className="w-full bg-secondary/50 border border-border rounded-lg px-5 py-4 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none"
               />
-              <button type="submit" className="btn-luxury rounded-sm w-full py-4">
+              <button type="submit" className="btn-luxury rounded-full w-full py-4">
                 Send Message
               </button>
             </form>
@@ -59,7 +59,7 @@ export default function ContactSection() {
           <div className={isVisible ? 'animate-slide-right' : 'opacity-0'}>
             <div className="glass rounded-lg overflow-hidden mb-8 h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977732232753!2d-122.3940638!3d37.7879235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a3e3dc43%3A0x97b40c038e4e1de7!2s1%20Market%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125068.5135763945!2d78.0772033!3d11.6643254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf059c4749f57%3A0x6d97c6c4c92b2d6a!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1712680000000!5m2!1sen!2sin"
                 className="w-full h-full border-0 grayscale opacity-70"
                 loading="lazy"
                 title="Office location"
@@ -68,9 +68,9 @@ export default function ContactSection() {
 
             <div className="space-y-6">
               {[
-                { icon: MapPin, label: 'Headquarters', value: '1 Market Street, Suite 4500\nSan Francisco, CA 94105' },
-                { icon: Phone, label: 'Phone', value: '+1 (415) 555-0180' },
-                { icon: Mail, label: 'Email', value: 'concierge@eliteestates.com' },
+                { icon: MapPin, label: 'Headquarters', value: '123 Luxury Lane, Hasthampatti\nSalem, Tamil Nadu 636007' },
+                { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
+                { icon: Mail, label: 'Email', value: 'concierge@apexluxury.in' },
                 { icon: Clock, label: 'Hours', value: 'Mon – Sat: 9AM – 7PM' },
               ].map((info) => (
                 <div key={info.label} className="flex items-start gap-4">

@@ -1,69 +1,92 @@
-import { useState } from 'react';
-import { X, ZoomIn } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Premium3DGallery from './Premium3DGallery';
+
 import gallery1 from '@/assets/gallery-1.jpg';
 import gallery2 from '@/assets/gallery-2.jpg';
 import gallery3 from '@/assets/gallery-3.jpg';
 import gallery4 from '@/assets/gallery-4.jpg';
 import property1 from '@/assets/property-1.jpg';
 import property2 from '@/assets/property-2.jpg';
+import property3 from '@/assets/property-3.jpg';
+import heroVilla from '@/assets/hero-villa.jpg';
+import aboutImage from '@/assets/about-image.jpg';
+import ctaBg from '@/assets/cta-bg.jpg';
+import luxuryLivingRoom from '@/assets/luxury_living_room.png';
+import luxuryMansionExterior from '@/assets/luxury_mansion_exterior.png';
+import luxuryBathroom from '@/assets/luxury_bathroom.png';
+import luxuryKitchen from '@/assets/luxury_kitchen.png';
 
-const images = [
-  { src: gallery1, alt: 'Pool area at night', span: 'md:col-span-2' },
-  { src: gallery2, alt: 'Luxury kitchen', span: 'md:row-span-2' },
-  { src: gallery3, alt: 'Master bedroom with ocean view', span: '' },
-  { src: gallery4, alt: 'Spa bathroom', span: 'md:row-span-2' },
-  { src: property1, alt: 'Penthouse living room', span: '' },
-  { src: property2, alt: 'Beachfront villa', span: 'md:col-span-2' },
+const galleryImages = [
+  { 
+    src: gallery1, 
+    alt: 'Pool area at night',
+    category: 'VILLA EXTERIOR',
+    title: 'Salem Heights',
+    description: 'Immaculate pools designed for evening tranquility in the heart of Salem.'
+  },
+  { 
+    src: luxuryMansionExterior, 
+    alt: 'Mansion exterior',
+    category: 'ULTRA MODERN',
+    title: 'The Apex Manor',
+    description: 'Bold architectural lines meet sustainable luxury in our most exclusive residence in Chennai.'
+  },
+  { 
+    src: gallery2, 
+    alt: 'Luxury kitchen',
+    category: 'CULINARY ART',
+    title: 'Chef\'s Sanctuary',
+    description: 'State-of-the-art kitchens crafted with Italian marble, perfect for Coimbatore homes.'
+  },
+  { 
+    src: luxuryLivingRoom, 
+    alt: 'Master bedroom with city view',
+    category: 'CITY LIVING',
+    title: 'Nungambakkam Penthouse',
+    description: 'Breathtaking 360-degree city views from our crowning Chennai collection.'
+  },
+  { 
+    src: property2, 
+    alt: 'Beachfront villa',
+    category: 'COASTAL RETREAT',
+    title: 'ECR Breeze',
+    description: 'Wake up to the sound of waves in perfectly integrated indoor-outdoor spaces in Chennai.'
+  },
+  { 
+    src: luxuryBathroom, 
+    alt: 'Spa bathroom',
+    category: 'WELLNESS OASIS',
+    title: 'The Ivory Spa',
+    description: 'Private retreats designed for rejuvenation, featuring custom stone baths.'
+  },
+  { 
+    src: heroVilla, 
+    alt: 'Infinity pool at twilight',
+    category: 'HILLSIDE RETREAT',
+    title: 'Yercaud Pavilion',
+    description: 'Where the horizon of Salem meets true peace at the edge of the hills.'
+  },
 ];
 
 export default function GallerySection() {
-  const [lightbox, setLightbox] = useState<string | null>(null);
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <>
-      <section id="gallery" className="section-padding bg-background">
-        <div ref={ref} className="max-w-7xl mx-auto">
-          <div className={`text-center mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-            <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-3">Showcase</p>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Gallery</h2>
-            <div className="glow-line mt-4" />
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
-            {images.map((img, i) => (
-              <div
-                key={i}
-                className={`group relative overflow-hidden rounded-lg cursor-pointer ${img.span} ${
-                  isVisible ? 'animate-scale-in' : 'opacity-0'
-                }`}
-                style={{ animationDelay: `${i * 0.1}s` }}
-                onClick={() => setLightbox(img.src)}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-center justify-center">
-                  <ZoomIn size={28} className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-              </div>
-            ))}
-          </div>
+    <section id="gallery" className="relative bg-background py-12 md:py-20 overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(234,179,8,0.05),transparent_50%)] pointer-events-none" />
+      
+      <div ref={ref} className="container mx-auto relative z-10 mb-6 md:mb-12">
+        <div className={`text-center ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+          <p className="text-primary italic font-heading text-lg md:text-xl mb-1 md:mb-2 drop-shadow-md">Discover the Unparalleled</p>
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-8 text-white drop-shadow-2xl">
+            Our <span className="text-primary">Elite</span> Collection
+          </h2>
         </div>
-      </section>
-
-      {lightbox && (
-        <div className="fixed inset-0 z-[100] bg-background/95 flex items-center justify-center p-6 animate-fade-in" onClick={() => setLightbox(null)}>
-          <button className="absolute top-6 right-6 text-foreground hover:text-primary transition-colors" onClick={() => setLightbox(null)} aria-label="Close">
-            <X size={32} />
-          </button>
-          <img src={lightbox} alt="Gallery preview" className="max-w-full max-h-[85vh] object-contain rounded-lg" />
-        </div>
-      )}
-    </>
+      </div>
+      
+      <div className="w-full h-full">
+        <Premium3DGallery images={galleryImages} />
+      </div>
+    </section>
   );
 }
